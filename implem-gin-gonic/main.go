@@ -1,11 +1,11 @@
 package main
 
 import (
-	"golang-chapter-37/config"
-	"golang-chapter-37/controller"
-	"golang-chapter-37/database"
-	"golang-chapter-37/middleware"
-	"golang-chapter-37/router"
+	"golang-chapter-37/implem-gin-gonic/config"
+	"golang-chapter-37/implem-gin-gonic/controller"
+	"golang-chapter-37/implem-gin-gonic/database"
+	"golang-chapter-37/implem-gin-gonic/middleware"
+	"golang-chapter-37/implem-gin-gonic/router"
 
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"

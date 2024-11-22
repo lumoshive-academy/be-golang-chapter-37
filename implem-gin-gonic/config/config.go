@@ -1,7 +1,7 @@
 package config
 
 import (
-	"golang-chapter-37/database"
+	"golang-chapter-37/implem-gin-gonic/database"
 	"log"
 
 	"github.com/spf13/viper"

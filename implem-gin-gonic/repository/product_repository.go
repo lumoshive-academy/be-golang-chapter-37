@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"golang-chapter-37/model"
+	"golang-chapter-37/implem-gin-gonic/model"
 
 	"gorm.io/gorm"
 )

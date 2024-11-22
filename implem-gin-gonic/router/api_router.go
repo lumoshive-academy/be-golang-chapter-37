@@ -1,7 +1,7 @@
 package router
 
 import (
-	"golang-chapter-37/controller"
+	"golang-chapter-37/implem-gin-gonic/controller"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,8 +1,8 @@
 package service
 
 import (
-	"golang-chapter-37/model"
-	"golang-chapter-37/repository"
+	"golang-chapter-37/implem-gin-gonic/model"
+	"golang-chapter-37/implem-gin-gonic/repository"
 
 	"github.com/go-playground/validator/v10"
 	"gorm.io/gorm"

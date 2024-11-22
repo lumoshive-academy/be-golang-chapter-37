@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"golang-chapter-37/model"
-	"golang-chapter-37/service"
+	"golang-chapter-37/implem-gin-gonic/model"
+	"golang-chapter-37/implem-gin-gonic/service"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
