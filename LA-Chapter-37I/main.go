@@ -1,39 +1,39 @@
-// middleware
-package main
+// // middleware
+// package main
 
-import (
-	"fmt"
-	"net/http"
+// import (
+// 	"fmt"
+// 	"net/http"
 
-	"github.com/gin-gonic/gin"
-)
+// 	"github.com/gin-gonic/gin"
+// )
 
-// Middleware untuk logging
-func Logger() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		// Log informasi sebelum handler
-		fmt.Println("Request received")
+// // Middleware untuk logging
+// func Logger() gin.HandlerFunc {
+// 	return func(c *gin.Context) {
+// 		// Log informasi sebelum handler
+// 		fmt.Println("Request received")
 
-		// Melanjutkan ke handler berikutnya
-		c.Next()
+// 		// Melanjutkan ke handler berikutnya
+// 		c.Next()
 
-		// Log informasi setelah handler
-		fmt.Println("Response sent")
-	}
-}
+// 		// Log informasi setelah handler
+// 		fmt.Println("Response sent")
+// 	}
+// }
 
-func main() {
-	r := gin.Default()
+// func main() {
+// 	r := gin.Default()
 
-	// Menambahkan middleware global
-	r.Use(Logger())
+// 	// Menambahkan middleware global
+// 	r.Use(Logger())
 
-	r.GET("/ping", func(c *gin.Context) {
-		c.String(http.StatusOK, "pong")
-	})
+// 	r.GET("/ping", func(c *gin.Context) {
+// 		c.String(http.StatusOK, "pong")
+// 	})
 
-	r.Run(":8080")
-}
+// 	r.Run(":8080")
+// }
 
 // // minddleware routing group
 // package main
@@ -75,39 +75,39 @@ func main() {
 //     r.Run(":8080")
 // }
 
-// // http client GET
-// package main
+// http client GET
+package main
 
-// import (
-//     "fmt"
-//     "io"
-//     "net/http"
-// )
+import (
+	"fmt"
+	"io"
+	"net/http"
+)
 
-// func main() {
-//     client := &http.Client{}
+func main() {
+	client := &http.Client{}
 
-//     req, err := http.NewRequest("GET", "https://jsonplaceholder.typicode.com/posts", nil)
-//     if err != nil {
-//         fmt.Println("Error creating request:", err)
-//         return
-//     }
+	req, err := http.NewRequest("GET", "https://router.project-osrm.org/route/v1/driving/106.8276122,-6.199131;106.949822,-6.2345118?overview=false", nil)
+	if err != nil {
+		fmt.Println("Error creating request:", err)
+		return
+	}
 
-//     resp, err := client.Do(req)
-//     if err != nil {
-//         fmt.Println("Error making request:", err)
-//         return
-//     }
-//     defer resp.Body.Close()
+	resp, err := client.Do(req)
+	if err != nil {
+		fmt.Println("Error making request:", err)
+		return
+	}
+	defer resp.Body.Close()
 
-//     body, err := io.ReadAll(resp.Body)
-//     if err != nil {
-//         fmt.Println("Error reading response:", err)
-//         return
-//     }
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println("Error reading response:", err)
+		return
+	}
 
-//     fmt.Println("Response:", string(body))
-// }
+	fmt.Println("Response:", string(body))
+}
 
 // // http client with param
 // package main
